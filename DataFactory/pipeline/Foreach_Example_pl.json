@@ -15,6 +15,10 @@
 				],
 				"userProperties": [],
 				"typeProperties": {
+					"items": {
+						"value": "@activity('Lookup for tables').output.value",
+						"type": "Expression"
+					},
 					"batchCount": 2,
 					"activities": [
 						{
@@ -33,7 +37,7 @@
 								"source": {
 									"type": "AzureSqlSource",
 									"sqlReaderQuery": {
-										"value": "select * from '@{item()}'",
+										"value": "select * from '@{item().table_names}'",
 										"type": "Expression"
 									},
 									"queryTimeout": "02:00:00",
@@ -69,7 +73,13 @@
 							"outputs": [
 								{
 									"referenceName": "csv_ds",
-									"type": "DatasetReference"
+									"type": "DatasetReference",
+									"parameters": {
+										"Path": {
+											"value": "@item().table_names",
+											"type": "Expression"
+										}
+									}
 								}
 							]
 						}
