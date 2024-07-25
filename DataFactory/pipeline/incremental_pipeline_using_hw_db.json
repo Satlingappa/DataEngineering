@@ -53,7 +53,7 @@
 					"source": {
 						"type": "AzureSqlSource",
 						"sqlReaderQuery": {
-							"value": "select * from @{activity('Lookup for TableName and LastUpdateDate').output.firstRow.table_name}\nwhere ModifiedDate >= @{activity('Lookup for TableName and LastUpdateDate').output.firstRow.LastUpdateDate}",
+							"value": "@concat('select * from ', activity('Lookup for TableName and LastUpdateDate').output.firstRow.table_name, ' where ModifiedDate >= ', activity('Lookup for TableName and LastUpdateDate').output.firstRow.LastUpdateDate)\n",
 							"type": "Expression"
 						},
 						"queryTimeout": "02:00:00",
