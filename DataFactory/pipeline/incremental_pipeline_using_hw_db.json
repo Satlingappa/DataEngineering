@@ -101,7 +101,7 @@
 				]
 			},
 			{
-				"name": "Script1",
+				"name": "Update LastUpdatedDate",
 				"type": "Script",
 				"dependsOn": [
 					{
