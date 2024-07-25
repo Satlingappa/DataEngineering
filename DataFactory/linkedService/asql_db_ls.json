@@ -1,0 +1,23 @@
+{
+	"name": "asql_db_ls",
+	"properties": {
+		"annotations": [],
+		"type": "AzureSqlDatabase",
+		"typeProperties": {
+			"server": "asqlserverone.database.windows.net",
+			"database": "asql_db_one",
+			"encrypt": "mandatory",
+			"trustServerCertificate": false,
+			"authenticationType": "SQL",
+			"userName": "SVHANALE",
+			"password": {
+				"type": "AzureKeyVaultSecret",
+				"store": {
+					"referenceName": "kv_practice_ls",
+					"type": "LinkedServiceReference"
+				},
+				"secretName": "asql-db-pwd"
+			}
+		}
+	}
+}
