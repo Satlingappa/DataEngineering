@@ -97,7 +97,10 @@
 				"outputs": [
 					{
 						"referenceName": "ASQL_db",
-						"type": "DatasetReference"
+						"type": "DatasetReference",
+						"parameters": {
+							"TableName": "Customer"
+						}
 					}
 				]
 			}
