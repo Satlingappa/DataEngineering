@@ -53,7 +53,7 @@
 					"source": {
 						"type": "AzureSqlSource",
 						"sqlReaderQuery": {
-							"value": "select * from SalesLT.customer where ModifiedDate <= '@{activity('Lookup for TableName and LastUpdateDate').output.firstRow.hw_date}'",
+							"value": "select * from SalesLT.customer where ModifiedDate >= '@{activity('Lookup for TableName and LastUpdateDate').output.firstRow.hw_date}'",
 							"type": "Expression"
 						},
 						"queryTimeout": "02:00:00",
@@ -92,7 +92,7 @@
 						"type": "DatasetReference",
 						"parameters": {
 							"Path": {
-								"value": "concat('@{activity('Lookup for TableName and LastUpdateDate').output.firstRow.table_name}','/','@{activity('Lookup for TableName and LastUpdateDate').output.firstRow.LastUpdateDate}'",
+								"value": "concat('@{activity('Lookup for TableName and LastUpdateDate').output.firstRow.tablename}','/','@{activity('Lookup for TableName and LastUpdateDate').output.firstRow.hw_date}'",
 								"type": "Expression"
 							},
 							"FileName": "Customer"
