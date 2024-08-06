@@ -9,7 +9,7 @@
 				"userProperties": [],
 				"typeProperties": {
 					"items": {
-						"value": "@createArray('select * from SalesLT.customer where custid > 100 and custid < 1000','select * from SalesLT.product where productid > 100')",
+						"value": "@createArray('select * from SalesLT.customer where customerid > 100 and customerid < 1000','select * from SalesLT.product where productid > 100')",
 						"type": "Expression"
 					},
 					"activities": [
