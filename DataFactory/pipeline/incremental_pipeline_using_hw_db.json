@@ -53,7 +53,7 @@
 					"source": {
 						"type": "AzureSqlSource",
 						"sqlReaderQuery": {
-							"value": "select * from SalesLT.customer where ModifiedDate >= '@{activity('Lookup for TableName and LastUpdateDate').output.firstRow.hw_date}'",
+							"value": "select * from SalesLT.@{activity('Lookup for TableName and LastUpdateDate').output.firstRow.tablename} where ModifiedDate >= '@{activity('Lookup for TableName and LastUpdateDate').output.firstRow.hw_date}'",
 							"type": "Expression"
 						},
 						"queryTimeout": "02:00:00",
