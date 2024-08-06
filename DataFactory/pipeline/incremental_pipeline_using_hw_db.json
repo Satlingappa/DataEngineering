@@ -89,14 +89,7 @@
 				"outputs": [
 					{
 						"referenceName": "csv_ds",
-						"type": "DatasetReference",
-						"parameters": {
-							"Path": {
-								"value": "concat('@{activity('Lookup for TableName and LastUpdateDate').output.firstRow.tablename}','/','@{activity('Lookup for TableName and LastUpdateDate').output.firstRow.hw_date}'",
-								"type": "Expression"
-							},
-							"FileName": "Customer"
-						}
+						"type": "DatasetReference"
 					}
 				]
 			},
