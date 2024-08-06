@@ -1,0 +1,29 @@
+{
+	"name": "hw_date_ds",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "generaladls_ls",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobFSLocation",
+				"fileName": "hw_date.csv",
+				"folderPath": "hw_date",
+				"fileSystem": "practice"
+			},
+			"columnDelimiter": ",",
+			"escapeChar": "\\",
+			"firstRowAsHeader": true,
+			"quoteChar": "\""
+		},
+		"schema": [
+			{
+				"name": "'2000-01-01 00:00:00'",
+				"type": "String"
+			}
+		]
+	}
+}
