@@ -5,14 +5,6 @@
 			"referenceName": "generaladls_ls",
 			"type": "LinkedServiceReference"
 		},
-		"parameters": {
-			"Path": {
-				"type": "string"
-			},
-			"FileName": {
-				"type": "string"
-			}
-		},
 		"annotations": [],
 		"type": "DelimitedText",
 		"typeProperties": {
